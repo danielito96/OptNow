@@ -5,9 +5,9 @@ using Xamarin.Forms;
 
 namespace OptNow
 {
-    public partial class Master : ContentPage
+    public partial class MisReferidosPage : ContentPage
     {
-        public Master()
+        public MisReferidosPage()
         {
             InitializeComponent();
         }

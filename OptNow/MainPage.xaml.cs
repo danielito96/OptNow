@@ -12,7 +12,10 @@ namespace OptNow
         public MainPage()
         {
             InitializeComponent();
-           
+            this.Master = new Master();
+            this.Detail = new NavigationPage(new DetailPage());
+
+            App.MasterD = this;
         }
     }
 }

@@ -9,6 +9,8 @@
                    HorizontalOptions="Center">
                 
             </Label>
+            <Label Text="Selecciona tu Billetera:"></Label>
+            <Picker x:Name="PickerCuentaBilletera" SelectedIndexChanged="PickerCuentaBilletera_SelectedIndexChanged"></Picker>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

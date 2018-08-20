@@ -11,5 +11,8 @@ namespace OptNow
         {
             InitializeComponent();
         }
+
+        void PickerCuentaBilletera_SelectedIndexChanged(Object sender, Eventargs)
+
     }
 }

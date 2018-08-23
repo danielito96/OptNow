@@ -18,9 +18,12 @@
                 Keyboard="Email"
                 Placeholder="Enter your email...">    
             </Entry>
+            <Label
+                Text="Password">
+            </Label>
             <Entry
                 IsPassword="true"
-                Placeholder="Enter your email...">    
+                Placeholder="Enter your password...">    
             </Entry>
             <ActivityIndicator>
             </ActivityIndicator>

@@ -2,9 +2,11 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+
 [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
 namespace OptNow
 {
+    using Views;   
     public partial class App : Application
     {
 
@@ -14,7 +16,7 @@ namespace OptNow
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

@@ -11,7 +11,7 @@
             </Label>
             <Label Text="Selecciona tu Billetera:"></Label>
             <Picker x:Name="PickerCuentaBilletera" 
-                    SelectedIndexChanged="PickerCuentaBilletera_SelectedIndexChanged"></Picker>
+                    SelectedIndexChanged="PickerCuentaBilletera_SelectedIndexChanged" ></Picker>
                     <Label Text="Escribe el correo registrado en tu billetera:"></Label>
             <Entry Placeholder="Email"></Entry>
             <Entry Placeholder="Confirmar Email"></Entry>

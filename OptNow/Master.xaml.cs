@@ -5,6 +5,7 @@ using Xamarin.Forms;
 
 namespace OptNow
 {
+    using Views;
     public partial class Master : ContentPage
     {
         public Master()
@@ -23,6 +24,12 @@ namespace OptNow
         {
             App.MasterD.IsPresented = false;
             await App.MasterD.Detail.Navigation.PushAsync(new RequerirPagoPage());
+
+        }
+        private async void LoginButton_Clicked(object sender, EventArgs e)
+        {
+            App.MasterD.IsPresented = false;
+            await App.MasterD.Detail.Navigation.PushAsync(new LoginPage());
 
         }
     }

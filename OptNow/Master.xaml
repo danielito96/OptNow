@@ -5,6 +5,9 @@
              Title="Master">
 
     <StackLayout Orientation="Vertical">
+        <Button Text="Login" 
+            x:Name="LoginButton"
+            Clicked="LoginButton_Clicked"></Button>
     <Button Text="Mis referidos" 
             x:Name="MisReferidosButton"
             Clicked="MisReferidosButton_Clicked"></Button>

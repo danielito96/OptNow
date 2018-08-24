@@ -11,5 +11,6 @@ namespace OptNow.Views
         {
             InitializeComponent();
         }
+
     }
 }

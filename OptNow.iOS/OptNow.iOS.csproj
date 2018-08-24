@@ -156,4 +156,10 @@
       <Name>OptNow</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bitcoin.svg.png" />
+    <BundleResource Include="Resources\instagramLogo.png" />
+    <BundleResource Include="Resources\logoFacebook.png" />
+    <BundleResource Include="Resources\twitterLogo.png" />
+  </ItemGroup>
 </Project>

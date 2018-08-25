@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="OptNow.Views.LoginPage" Title="Login">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OptNow.Views.LoginPage"
+             BindingContext="{Binding Main, Source={StaticResource Locator}}"
+             Title="Login">
     <ContentPage.Content>
+        <ScrollView
+            BindingContext="{Binding Login}">
         <StackLayout Padding="10,20">
             <Label FontAttributes="Bold" 
                    FontSize="Large" 
@@ -8,7 +14,7 @@
                    Text="OptNow">
             </Label>
             <Image 
-                Source="Bitcoin.svg" 
+                Source="Bitcoin" 
                 WidthRequest="200">
             </Image>
             <Grid 
@@ -26,6 +32,7 @@
                     Grid.Row="0" 
                     Grid.Column="1" 
                     Keyboard="Email" 
+                        Text="{Binding Email, Mode=TwoWay}"
                     Placeholder="Enter your email...">
                 </Entry>
                 <Label 
@@ -37,9 +44,14 @@
                     Grid.Row="1" 
                     Grid.Column="1" 
                     IsPassword="true" 
+                        Text="{Binding Password, Mode=TwoWay}"
                     Placeholder="Enter your password...">
                 </Entry>
             </Grid>
+                <ActivityIndicator
+                    IsRunning="{Binding IsRunning, Mode=TwoWay}"
+                   VerticalOptions="CenterAndExpand">
+            </ActivityIndicator>
             <StackLayout 
                 Orientation="Horizontal">
                 <Label 
@@ -47,12 +59,18 @@
                     Text="Rememberme in this device" 
                     VerticalOptions="Center">
                 </Label>
-                <Switch 
+                <Switch
+                        IsToggled="{Binding IsRemember, Mode=TwoWay }"
                     HorizontalOptions="End">
                 </Switch>
             </StackLayout>
-            <ActivityIndicator>
-            </ActivityIndicator>
+                <Label
+                    Text="Forgot your password?"
+                    TextColor="Blue"
+                    HorizontalOptions="Center">
+                    
+                </Label>
+            
             <StackLayout
                 Margin="40,0">
                 <Button 
@@ -89,5 +107,7 @@
             </Image>
             </StackLayout>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
+
 </ContentPage>

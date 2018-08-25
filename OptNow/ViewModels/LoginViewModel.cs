@@ -1,12 +1,29 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Windows.Input;
 using GalaSoft.MvvmLight.Command;
 using Xamarin.Forms;
 
 namespace OptNow.ViewModels
 {
-    public class LoginViewModel
+    public class LoginViewModel : INotifyPropertyChanged
     {
+
+        #region Events
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        #endregion
+
+        #region Attributes
+        private string email;
+        private string password;
+        private bool isRunning;
+        private bool isEnabled;
+
+        #endregion
+
+
         #region Properties
         public String Email
         {
@@ -16,20 +33,53 @@ namespace OptNow.ViewModels
 
         public String Password
         {
-            get;
-            set;
+            get { return password; }
+            set
+            {
+                if(this.password != value)
+                {
+                    this.password = value;
+                    PropertyChanged?.Invoke(
+                    this,
+                        new PropertyChangedEventArgs(nameof(this.Password)));
+                }
+            }
         }
 
         public Boolean IsRunning
         {
-            get;
-            set;
+            get { return isRunning; }
+            set
+            {
+                if (this.isRunning != value)
+                {
+                    this.isRunning = value;
+                    PropertyChanged?.Invoke(
+                    this,
+                        new PropertyChangedEventArgs(nameof(this.IsRunning)));
+                }
+            }
         }
 
         public Boolean IsRemember
         {
             get;
             set;
+        }
+
+        public bool IsEnabled
+        {
+            get { return isEnabled; }
+            set
+            {
+                if (this.isEnabled != value)
+                {
+                    this.isEnabled = value;
+                    PropertyChanged?.Invoke(
+                    this,
+                        new PropertyChangedEventArgs(nameof(this.IsEnabled)));
+                }
+            }
         }
 
 
@@ -40,6 +90,7 @@ namespace OptNow.ViewModels
         public LoginViewModel()
         {
             this.IsRemember = true;
+            this.IsEnabled = true;
         }
 
         #endregion
@@ -69,6 +120,15 @@ namespace OptNow.ViewModels
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "You must enter a password",
+                    "Accept");
+                return;
+            }
+
+            if (this.Email != "daniel@gmail.com" || this.Password == "1234")
+            {
+                await Application.Current.MainPage.DisplayAlert(
+                    "Error",
+                    "Email or Password is incorrect",
                     "Accept");
                 return;
             }

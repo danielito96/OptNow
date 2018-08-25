@@ -60,7 +60,7 @@
                     VerticalOptions="Center">
                 </Label>
                 <Switch
-                        IsToggled="{Binding IsRemember, Mode=TwoWay }"
+                        IsToggled="{Binding IsRemembered, Mode=TwoWay }"
                     HorizontalOptions="End">
                 </Switch>
             </StackLayout>
@@ -74,9 +74,11 @@
             <StackLayout
                 Margin="40,0">
                 <Button 
+                        Command="{Binding LoginCommand}"
                 BackgroundColor="Navy" 
                 BorderRadius="23"
                 HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                 Text="Login" 
                 TextColor="White">
             </Button>
@@ -84,6 +86,7 @@
                 BackgroundColor="Purple" 
                 BorderRadius="23"
                 HeightRequest="46"
+                        IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                 Text="Register" 
                 TextColor="White">
             </Button>

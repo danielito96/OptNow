@@ -124,6 +124,9 @@ namespace OptNow.ViewModels
                 return;
             }
 
+            this.IsRunning = true;
+            this.IsEnabled = true;
+
             if (this.Email != "daniel@gmail.com" || this.Password == "1234")
             {
                 await Application.Current.MainPage.DisplayAlert(

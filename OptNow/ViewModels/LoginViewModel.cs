@@ -6,15 +6,8 @@ using Xamarin.Forms;
 
 namespace OptNow.ViewModels
 {
-    public class LoginViewModel : INotifyPropertyChanged
+    public class LoginViewModel : BaseViewModel
     {
-
-        #region Events
-
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        #endregion
-
         #region Attributes
         private string email;
         private string password;
@@ -125,10 +118,12 @@ namespace OptNow.ViewModels
             }
 
             this.IsRunning = true;
-            this.IsEnabled = true;
+            this.IsEnabled = false;
 
             if (this.Email != "daniel@gmail.com" || this.Password == "1234")
             {
+                this.IsRunning = false;
+                this.IsEnabled = true;
                 await Application.Current.MainPage.DisplayAlert(
                     "Error",
                     "Email or Password is incorrect",

@@ -26,32 +26,14 @@ namespace OptNow.ViewModels
 
         public String Password
         {
-            get { return password; }
-            set
-            {
-                if(this.password != value)
-                {
-                    this.password = value;
-                    PropertyChanged?.Invoke(
-                    this,
-                        new PropertyChangedEventArgs(nameof(this.Password)));
-                }
-            }
+            get { return this.password; }
+            set { SetValue(ref this.password, value); }
         }
 
         public Boolean IsRunning
         {
-            get { return isRunning; }
-            set
-            {
-                if (this.isRunning != value)
-                {
-                    this.isRunning = value;
-                    PropertyChanged?.Invoke(
-                    this,
-                        new PropertyChangedEventArgs(nameof(this.IsRunning)));
-                }
-            }
+            get { return this.isRunning; }
+            set { SetValue(ref this.isRunning, value); }
         }
 
         public Boolean IsRemember
@@ -62,17 +44,8 @@ namespace OptNow.ViewModels
 
         public bool IsEnabled
         {
-            get { return isEnabled; }
-            set
-            {
-                if (this.isEnabled != value)
-                {
-                    this.isEnabled = value;
-                    PropertyChanged?.Invoke(
-                    this,
-                        new PropertyChangedEventArgs(nameof(this.IsEnabled)));
-                }
-            }
+            get { return this.isEnabled; }
+            set { SetValue(ref this.isEnabled, value); }
         }
 
 

@@ -12,7 +12,9 @@
                    FontSize="Large" 
                    HorizontalOptions="Center" 
                    Text="OptNow">
-            </Label>
+                    
+                </Label>
+            
             <Image 
                 Source="Bitcoin" 
                 WidthRequest="200">
@@ -23,7 +25,8 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="2*" />
                 </Grid.ColumnDefinitions>
-                <Label 
+                <Label
+                        VerticalOptions="Center"
                     Grid.Row="0" 
                     Grid.Column="0" 
                     Text="Email">
@@ -36,11 +39,12 @@
                     Placeholder="Enter your email...">
                 </Entry>
                 <Label 
+                    VerticalOptions="Center"
                     Grid.Row="1" 
                     Grid.Column="0" 
                     Text="Password">
                 </Label>
-                <Entry 
+                <Entry
                     Grid.Row="1" 
                     Grid.Column="1" 
                     IsPassword="true" 
@@ -56,7 +60,7 @@
                 Orientation="Horizontal">
                 <Label 
                     HorizontalOptions="StartAndExpand" 
-                    Text="Rememberme in this device" 
+                    Text="Rememberme on this device" 
                     VerticalOptions="Center">
                 </Label>
                 <Switch

@@ -5,7 +5,7 @@ using System.Runtime.CompilerServices;
 
 namespace OptNow.ViewModels
 {
-    public class BaseViewModel : INotifyPropertyChanged
+	public class BaseViewModel : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -20,9 +20,9 @@ namespace OptNow.ViewModels
             {
                 return;
             }
+
             backingField = value;
             OnPropertyChanged(propertyName);
         }
-        
     }
 }

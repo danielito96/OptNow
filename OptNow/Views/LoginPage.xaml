@@ -3,24 +3,18 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OptNow.Views.LoginPage"
              BindingContext="{Binding Main, Source={StaticResource Locator}}"
-             Title="Login">
+             Title="OptNow">
     <ContentPage.Content>
         <ScrollView
             BindingContext="{Binding Login}">
-        <StackLayout Padding="10,20">
-            <Label FontAttributes="Bold" 
-                   FontSize="Large" 
-                   HorizontalOptions="Center" 
-                   Text="OptNow">
-                    
-                </Label>
-            
+        <StackLayout Padding="5">
             <Image 
                 Source="Bitcoin" 
                 WidthRequest="200">
             </Image>
-            <Grid 
-                Margin="0,20">
+            <Grid
+                    VerticalOptions="CenterAndExpand"
+                    Margin="10,0">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="2*" />
@@ -56,7 +50,8 @@
                     IsRunning="{Binding IsRunning, Mode=TwoWay}"
                    VerticalOptions="CenterAndExpand">
             </ActivityIndicator>
-            <StackLayout 
+            <StackLayout
+                    Margin="10,0"
                 Orientation="Horizontal">
                 <Label 
                     HorizontalOptions="StartAndExpand" 
@@ -76,12 +71,15 @@
                 </Label>
             
             <StackLayout
+                    Orientation="Horizontal"
                 Margin="40,0">
                 <Button 
                         Command="{Binding LoginCommand}"
                 BackgroundColor="Navy" 
                 BorderRadius="23"
                 HeightRequest="46"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand"
                         IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                 Text="Login" 
                 TextColor="White">
@@ -90,12 +88,15 @@
                 BackgroundColor="Purple" 
                 BorderRadius="23"
                 HeightRequest="46"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="FillAndExpand"
                         IsEnabled="{Binding IsEnabled, Mode=TwoWay}"
                 Text="Register" 
                 TextColor="White">
             </Button>
             </StackLayout>
             <StackLayout
+                    VerticalOptions="EndAndExpand"
                 HorizontalOptions="Center"
                 Orientation="Horizontal">
                 <Image

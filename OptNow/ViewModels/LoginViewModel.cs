@@ -93,7 +93,7 @@ namespace OptNow.ViewModels
             this.IsRunning = true;
             this.IsEnabled = false;
 
-            if (this.Email != "daniel@gmail.com" || this.Password == "1234")
+            if (this.Email != "daniel@gmail.com" || this.Password != "1234")
             {
                 this.IsRunning = false;
                 this.IsEnabled = true;
